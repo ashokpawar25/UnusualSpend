@@ -1,11 +1,11 @@
-package com.ttp.domain.model;
+package com.ttp.unusualspend.domain.model;
 
-import com.ttp.domain.exceptions.transaction.InvalidCardIdException;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidCardIdException;
 
 import java.util.Objects;
 
 public class CreditCard {
-    private int cardId;
+    private final int cardId;
     private User user;
     public CreditCard(int cardId)
     {

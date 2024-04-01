@@ -1,8 +1,8 @@
 package com.ttp.domain.model.validator;
 
-import com.ttp.domain.exceptions.user.InvalideEmailException;
-import com.ttp.domain.model.User;
-import com.ttp.domain.validator.emailValidator.EmailValidator;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideEmailException;
+import com.ttp.unusualspend.domain.model.User;
+import com.ttp.unusualspend.domain.model.validator.EmailValidator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

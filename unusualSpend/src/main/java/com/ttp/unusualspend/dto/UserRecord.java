@@ -1,4 +1,4 @@
-package com.ttp.dto;
+package com.ttp.unusualspend.dto;
 
 import java.util.List;
 

@@ -1,8 +1,9 @@
 package com.ttp.domain.model;
 
-import com.ttp.domain.exceptions.user.InvalideEmailException;
-import com.ttp.domain.exceptions.user.InvalideUserNameException;
-import com.ttp.domain.exceptions.user.InvalideUserIdException;
+import com.ttp.unusualspend.domain.model.User;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideEmailException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideUserNameException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideUserIdException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

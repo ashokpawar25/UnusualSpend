@@ -1,8 +1,10 @@
 package com.ttp.domain.model;
 
-import com.ttp.domain.exceptions.transaction.InvalidAmountException;
-import com.ttp.domain.exceptions.transaction.InvalidCategoryException;
-import com.ttp.domain.exceptions.transaction.InvalidTransactionIdException;
+import com.ttp.unusualspend.domain.model.Category;
+import com.ttp.unusualspend.domain.model.Transaction;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidAmountException;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidCategoryException;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidTransactionIdException;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

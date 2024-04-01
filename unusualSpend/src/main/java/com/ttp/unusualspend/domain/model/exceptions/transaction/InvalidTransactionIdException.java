@@ -1,4 +1,4 @@
-package com.ttp.domain.exceptions.transaction;
+package com.ttp.unusualspend.domain.model.exceptions.transaction;
 
 public class InvalidTransactionIdException extends Exception
 {

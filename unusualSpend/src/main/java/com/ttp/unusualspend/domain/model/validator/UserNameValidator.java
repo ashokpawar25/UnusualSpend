@@ -1,4 +1,4 @@
-package com.ttp.domain.validator.userNameValidator;
+package com.ttp.unusualspend.domain.model.validator;
 
 public class UserNameValidator {
     public static boolean validateUserName(String name)

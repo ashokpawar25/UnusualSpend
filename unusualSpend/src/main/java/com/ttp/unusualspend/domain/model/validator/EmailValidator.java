@@ -1,4 +1,4 @@
-package com.ttp.domain.validator.emailValidator;
+package com.ttp.unusualspend.domain.model.validator;
 
 import java.util.regex.Pattern;
 

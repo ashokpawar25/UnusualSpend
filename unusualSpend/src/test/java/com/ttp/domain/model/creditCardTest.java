@@ -1,7 +1,7 @@
 package com.ttp.domain.model;
 
-import com.ttp.domain.exceptions.transaction.InvalidCardIdException;
-import org.junit.jupiter.api.Assertions;
+import com.ttp.unusualspend.domain.model.CreditCard;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidCardIdException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

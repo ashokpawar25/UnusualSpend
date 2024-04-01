@@ -1,12 +1,12 @@
 package com.ttp.creditCardManager;
 
-import com.ttp.domain.model.Category;
-import com.ttp.domain.model.CreditCard;
-import com.ttp.domain.model.Transaction;
-import com.ttp.domain.model.User;
-import com.ttp.dto.AmountAndCategory;
+import com.ttp.unusualspend.domain.model.Category;
+import com.ttp.unusualspend.domain.model.CreditCard;
+import com.ttp.unusualspend.domain.model.Transaction;
+import com.ttp.unusualspend.domain.model.User;
+import com.ttp.unusualspend.dto.AmountAndCategory;
 import com.ttp.handler.EmailHandler;
-import com.ttp.dto.UserRecord;
+import com.ttp.unusualspend.dto.UserRecord;
 
 import java.time.LocalDate;
 import java.time.Month;
@@ -28,11 +28,7 @@ public class CreditCardManager {
 
     public void addTransaction(List<Transaction> transactions)
     {
-        for(Transaction transaction:transactions)
-        {
-            this.transactions.add(transaction);
-        }
-
+        this.transactions.addAll(transactions);
     }
 
     public List<Transaction> getTransactions()

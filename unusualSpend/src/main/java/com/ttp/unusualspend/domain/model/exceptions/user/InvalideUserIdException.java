@@ -1,4 +1,4 @@
-package com.ttp.domain.exceptions.user;
+package com.ttp.unusualspend.domain.model.exceptions.user;
 
 public class InvalideUserIdException extends Exception
 {

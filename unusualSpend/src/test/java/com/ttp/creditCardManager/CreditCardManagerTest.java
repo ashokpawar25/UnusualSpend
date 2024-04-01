@@ -1,17 +1,17 @@
 package com.ttp.creditCardManager;
 
-import com.ttp.domain.model.Category;
-import com.ttp.domain.model.Transaction;
-import com.ttp.domain.exceptions.transaction.InvalidCardIdException;
-import com.ttp.domain.model.CreditCard;
-import com.ttp.domain.model.User;
-import com.ttp.domain.exceptions.transaction.InvalidAmountException;
-import com.ttp.domain.exceptions.user.InvalideEmailException;
-import com.ttp.domain.exceptions.user.InvalideUserNameException;
-import com.ttp.domain.exceptions.transaction.InvalidCategoryException;
-import com.ttp.domain.exceptions.transaction.InvalidTransactionIdException;
-import com.ttp.domain.exceptions.user.InvalideUserIdException;
-import com.ttp.dto.UserRecord;
+import com.ttp.unusualspend.domain.model.Category;
+import com.ttp.unusualspend.domain.model.Transaction;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidCardIdException;
+import com.ttp.unusualspend.domain.model.CreditCard;
+import com.ttp.unusualspend.domain.model.User;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidAmountException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideEmailException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideUserNameException;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidCategoryException;
+import com.ttp.unusualspend.domain.model.exceptions.transaction.InvalidTransactionIdException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideUserIdException;
+import com.ttp.unusualspend.dto.UserRecord;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

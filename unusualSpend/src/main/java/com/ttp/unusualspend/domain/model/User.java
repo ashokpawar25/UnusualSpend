@@ -1,10 +1,10 @@
-package com.ttp.domain.model;
+package com.ttp.unusualspend.domain.model;
 
-import com.ttp.domain.validator.emailValidator.EmailValidator;
-import com.ttp.domain.exceptions.user.InvalideEmailException;
-import com.ttp.domain.exceptions.user.InvalideUserNameException;
-import com.ttp.domain.exceptions.user.InvalideUserIdException;
-import com.ttp.domain.validator.userNameValidator.UserNameValidator;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideEmailException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideUserIdException;
+import com.ttp.unusualspend.domain.model.exceptions.user.InvalideUserNameException;
+import com.ttp.unusualspend.domain.model.validator.EmailValidator;
+import com.ttp.unusualspend.domain.model.validator.UserNameValidator;
 
 public class User {
     private final int userId;

@@ -1,6 +1,6 @@
-package com.ttp.dto;
+package com.ttp.unusualspend.dto;
 
-import com.ttp.domain.model.Category;
+import com.ttp.unusualspend.domain.model.Category;
 
 public class AmountAndCategory
 {
