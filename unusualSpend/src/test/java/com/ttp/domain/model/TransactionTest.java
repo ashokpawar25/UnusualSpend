@@ -17,7 +17,7 @@ public class TransactionTest {
     void shouldBeAbleToCreateTransaction() throws InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException {
         // arrange
         int transactionId = 1;
-        Category category = Category.groceries;
+        Category category = Category.GROCERIES;
         int transactionAmount = 100;
         LocalDate transactionDate = LocalDate.of(2024, 3, 17);
         int creditCardId = 1;
@@ -32,8 +32,8 @@ public class TransactionTest {
 
     @Test
     void shouldBeAbleToThrowExceptionForInvalidTransactionId() {
-        assertThrows(InvalidTransactionIdException.class, () -> Transaction.create(-1, Category.travel, 100, LocalDate.of(2024, 3, 17), 1));
-        assertThrows(InvalidTransactionIdException.class, () -> Transaction.create(0, Category.travel, 100, LocalDate.of(2024, 3, 17), 1));
+        assertThrows(InvalidTransactionIdException.class, () -> Transaction.create(-1, Category.TRAVEL, 100, LocalDate.of(2024, 3, 17), 1));
+        assertThrows(InvalidTransactionIdException.class, () -> Transaction.create(0, Category.TRAVEL, 100, LocalDate.of(2024, 3, 17), 1));
     }
 
     @Test
@@ -43,8 +43,8 @@ public class TransactionTest {
 
     @Test
     void shouldBeAbleToThrowExceptionForInvalidAmount() {
-        assertThrows(InvalidAmountException.class, () -> Transaction.create(1, Category.travel, 0, LocalDate.of(2024, 3, 17), 1));
-        assertThrows(InvalidAmountException.class, () -> Transaction.create(1, Category.groceries, -1, LocalDate.of(2024, 3, 17), 1));
+        assertThrows(InvalidAmountException.class, () -> Transaction.create(1, Category.TRAVEL, 0, LocalDate.of(2024, 3, 17), 1));
+        assertThrows(InvalidAmountException.class, () -> Transaction.create(1, Category.GROCERIES, -1, LocalDate.of(2024, 3, 17), 1));
     }
 
 

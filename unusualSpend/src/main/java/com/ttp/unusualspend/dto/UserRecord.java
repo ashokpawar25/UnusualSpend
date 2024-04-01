@@ -16,15 +16,8 @@ public class UserRecord
         return usualSpendList;
     }
 
-    public void setUsualSpendList(List<AmountAndCategory> usualSpendList) {
-        this.usualSpendList = usualSpendList;
-    }
-
     public List<AmountAndCategory> getUnUsualSpendList() {
         return unUsualSpendList;
     }
 
-    public void setUnUsualSpendList(List<AmountAndCategory> unUsualSpendList) {
-        this.unUsualSpendList = unUsualSpendList;
-    }
 }
