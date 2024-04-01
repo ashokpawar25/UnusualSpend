@@ -17,20 +17,20 @@ public class UserTest {
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionWhenUserIdIsInvalid(){
+    void shouldBeAbleToThrowExceptionForInvalidUserId(){
         assertThrows(InvalideUserIdException.class, () -> User.create(-1, "Ashok Pawar", "ashokpawar8020@gmail.com"));
         assertThrows(InvalideUserIdException.class, () -> User.create(0, "Ashok Pawar", "ashokpawar8020@gmail.com"));
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionWhenEmailIdIsInvalid(){
+    void shouldBeAbleToThrowExceptionForInvalidEmailId(){
         assertThrows(InvalideEmailException.class, () -> User.create(1, "Ashok Pawar", null));
         assertThrows(InvalideEmailException.class, () -> User.create(2, "Ashok Pawar", ""));
         assertThrows(InvalideEmailException.class, () -> User.create(2, "Ashok Pawar", "ashokpawar8020@gmailcom"));
     }
 
     @Test
-    void shouldThrowExceptionWhenUserNameIsInvalid(){
+    void shouldThrowExceptionForInvalidUserName(){
         assertThrows(InvalideUserNameException.class, () -> User.create(4, "av al", "sample@gmail.com"));
     }
 }

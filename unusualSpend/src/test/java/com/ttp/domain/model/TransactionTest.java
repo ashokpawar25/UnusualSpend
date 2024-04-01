@@ -31,20 +31,20 @@ public class TransactionTest {
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionWhenInvalidTransactionIdIsPassed() {
+    void shouldBeAbleToThrowExceptionForInvalidTransactionId() {
         assertThrows(InvalidTransactionIdException.class, () -> Transaction.create(-1, Category.travel, 100, LocalDate.of(2024, 3, 17), 1));
         assertThrows(InvalidTransactionIdException.class, () -> Transaction.create(0, Category.travel, 100, LocalDate.of(2024, 3, 17), 1));
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionWhenInvalidCategoryIsPassed() {
+    void shouldBeAbleToThrowExceptionForInvalidCategory() {
         assertThrows(InvalidCategoryException.class, () -> Transaction.create(1, null, 100, LocalDate.of(2024, 3, 17), 1));
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionWhenInvalidAmountIsPassed() {
-        assertThrows(InvalidCategoryException.class, () -> Transaction.create(1, null, 0, LocalDate.of(2024, 3, 17), 1));
-        assertThrows(InvalidCategoryException.class, () -> Transaction.create(1, null, -1, LocalDate.of(2024, 3, 17), 1));
+    void shouldBeAbleToThrowExceptionForInvalidAmount() {
+        assertThrows(InvalidAmountException.class, () -> Transaction.create(1, Category.travel, 0, LocalDate.of(2024, 3, 17), 1));
+        assertThrows(InvalidAmountException.class, () -> Transaction.create(1, Category.groceries, -1, LocalDate.of(2024, 3, 17), 1));
     }
 
 

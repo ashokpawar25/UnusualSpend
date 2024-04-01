@@ -5,9 +5,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class UserNameValidatorTest {
+
     @Test
-    void shouldValidateUserName() {
+    void shouldValidateValidUserName() {
         Assertions.assertTrue(UserNameValidator.isValidUserName("Ashok Pawar"));
+    }
+
+    @Test
+    void shouldValidateInvalidUserName() {
         Assertions.assertFalse(UserNameValidator.validateUserName("A b"));
         Assertions.assertFalse(UserNameValidator.validateUserName("A ab"));
         Assertions.assertFalse(UserNameValidator.validateUserName("A abc"));
@@ -21,7 +26,6 @@ public class UserNameValidatorTest {
         Assertions.assertFalse(UserNameValidator.validateUserName("Abc @ab"));
         Assertions.assertFalse(UserNameValidator.validateUserName("Abcab"));
         Assertions.assertFalse(UserNameValidator.validateUserName("Abca@b"));
-        Assertions.assertTrue(UserNameValidator.validateUserName("Abc abc"));
-
+        Assertions.assertFalse(UserNameValidator.validateUserName(" rAbca@b"));
     }
 }

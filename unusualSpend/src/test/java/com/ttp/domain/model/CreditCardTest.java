@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class creditCardTest {
+public class CreditCardTest {
     @Test
     void shouldBeAbleToCreateCreditCard() throws InvalidCardIdException {
         // arrange
@@ -22,9 +22,8 @@ public class creditCardTest {
     }
 
     @Test
-    void shouldBeAbleToThrowExceptionWhenCardIdIdInvalid()
-    {
-        assertThrows(InvalidCardIdException.class,()->CreditCard.create(0));
-        assertThrows(InvalidCardIdException.class,()->CreditCard.create(-1));
+    void shouldBeAbleToThrowExceptionForInvalidCardId() {
+        assertThrows(InvalidCardIdException.class, () -> CreditCard.create(0));
+        assertThrows(InvalidCardIdException.class, () -> CreditCard.create(-1));
     }
 }
