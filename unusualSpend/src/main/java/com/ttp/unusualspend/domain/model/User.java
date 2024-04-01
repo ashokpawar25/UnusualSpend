@@ -29,12 +29,6 @@ public class User {
         return userId>0;
     }
 
-
-
-    public int getUserId() {
-        return userId;
-    }
-
     public String getName() {
         return name;
     }

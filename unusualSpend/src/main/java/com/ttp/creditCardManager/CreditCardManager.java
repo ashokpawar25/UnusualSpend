@@ -88,7 +88,7 @@ public class CreditCardManager {
         return true;
     }
 
-    public Map<Integer, UserRecord> getUserRecord(int thresholdPercentage)
+    public Map<Integer, UserRecord> getUserRecord(double thresholdPercentage)
     {
         double criteria = 1 + (thresholdPercentage/100);
         Map<Integer ,UserRecord> userRecords = new HashMap<>();
