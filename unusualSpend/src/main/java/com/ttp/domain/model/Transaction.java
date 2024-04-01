@@ -1,8 +1,8 @@
 package com.ttp.domain.model;
 
 import com.ttp.domain.exceptions.transaction.InvalidAmountException;
-import com.ttp.domain.exceptions.transaction.InvalideCategoryException;
-import com.ttp.domain.exceptions.transaction.InvalideTransactionIdException;
+import com.ttp.domain.exceptions.transaction.InvalidCategoryException;
+import com.ttp.domain.exceptions.transaction.InvalidTransactionIdException;
 
 import java.time.LocalDate;
 import java.util.EnumSet;
@@ -24,9 +24,9 @@ public class Transaction {
         this.creditCardId = creditCardId;
     }
 
-    public static Transaction create(int transactionID, Category category, int transactionAmount, LocalDate transactionDate, int creditCardId) throws InvalideTransactionIdException, InvalideCategoryException, InvalidAmountException {
-        if(transactionID == 0 || transactionID < 0) throw new InvalideTransactionIdException("Invalid Transaction Id");
-        if(!EnumSet.allOf(Category.class).contains(category)) throw new InvalideCategoryException("Invalid Category found");
+    public static Transaction create(int transactionID, Category category, int transactionAmount, LocalDate transactionDate, int creditCardId) throws InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException {
+        if(transactionID == 0 || transactionID < 0) throw new InvalidTransactionIdException("Invalid Transaction Id");
+        if(!EnumSet.allOf(Category.class).contains(category)) throw new InvalidCategoryException("Invalid Category found");
         if(transactionAmount == 0 || transactionAmount < 0) throw new InvalidAmountException("Amount should be greater than 0");
         return new Transaction(transactionID,category,transactionAmount,transactionDate,creditCardId);
     }

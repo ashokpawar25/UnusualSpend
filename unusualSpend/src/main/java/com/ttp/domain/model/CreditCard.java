@@ -5,8 +5,8 @@ import com.ttp.domain.exceptions.transaction.InvalidCardIdException;
 import java.util.Objects;
 
 public class CreditCard {
-    int cardId;
-    User user;
+    private int cardId;
+    private User user;
     public CreditCard(int cardId)
     {
         this.cardId=cardId;
@@ -21,10 +21,6 @@ public class CreditCard {
 
     public int getCardId() {
         return cardId;
-    }
-
-    public void setCardId(int cardId) {
-        this.cardId = cardId;
     }
 
     public User getUser() {

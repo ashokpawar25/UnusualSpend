@@ -8,8 +8,8 @@ import com.ttp.domain.model.User;
 import com.ttp.domain.exceptions.transaction.InvalidAmountException;
 import com.ttp.domain.exceptions.user.InvalideEmailException;
 import com.ttp.domain.exceptions.user.InvalideUserNameException;
-import com.ttp.domain.exceptions.transaction.InvalideCategoryException;
-import com.ttp.domain.exceptions.transaction.InvalideTransactionIdException;
+import com.ttp.domain.exceptions.transaction.InvalidCategoryException;
+import com.ttp.domain.exceptions.transaction.InvalidTransactionIdException;
 import com.ttp.domain.exceptions.user.InvalideUserIdException;
 import com.ttp.dto.UserRecord;
 import org.junit.jupiter.api.Assertions;
@@ -39,7 +39,7 @@ public class CreditCardManagerTest {
     }
 
     @Test
-    void shouldAbleToAddTransactionForCreditCard() throws InvalidCardIdException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalideTransactionIdException, InvalideCategoryException, InvalidAmountException {
+    void shouldAbleToAddTransactionForCreditCard() throws InvalidCardIdException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException {
         //Arrange
         CreditCard creditCard = CreditCard.create(1);
 
@@ -63,7 +63,7 @@ public class CreditCardManagerTest {
     }
 
     @Test
-    void shouldAbleToAddMultipleTransactionsForCreditCard() throws InvalideTransactionIdException, InvalideCategoryException, InvalidAmountException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidCardIdException {
+    void shouldAbleToAddMultipleTransactionsForCreditCard() throws InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidCardIdException {
         //Arrange
         CreditCard creditCard = CreditCard.create(1);
 
@@ -89,7 +89,7 @@ public class CreditCardManagerTest {
     }
 
     @Test
-    void shouldAbleToFilterTransactionsByMonth() throws InvalidCardIdException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalideTransactionIdException, InvalideCategoryException, InvalidAmountException {
+    void shouldAbleToFilterTransactionsByMonth() throws InvalidCardIdException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException {
         //Arrange
         CreditCard creditCard = CreditCard.create(1);
 
@@ -115,7 +115,7 @@ public class CreditCardManagerTest {
     }
 
     @Test
-    void shouldAbleToFindRecordOfUserSpend() throws InvalideTransactionIdException, InvalideCategoryException, InvalidAmountException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidCardIdException {
+    void shouldAbleToFindRecordOfUserSpend() throws InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidCardIdException {
         //Arrange
         CreditCard creditCard = CreditCard.create(1);
 
@@ -148,7 +148,7 @@ public class CreditCardManagerTest {
     }
 
     @Test
-    void shouldAbleToSendEmailForUnusualSpendUsers() throws InvalidCardIdException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalideTransactionIdException, InvalideCategoryException, InvalidAmountException {
+    void shouldAbleToSendEmailForUnusualSpendUsers() throws InvalidCardIdException, InvalideEmailException, InvalideUserNameException, InvalideUserIdException, InvalidTransactionIdException, InvalidCategoryException, InvalidAmountException {
         //Arrange
         CreditCard creditCard = CreditCard.create(1);
 

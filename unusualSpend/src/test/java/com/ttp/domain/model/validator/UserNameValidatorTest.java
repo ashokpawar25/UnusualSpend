@@ -1,4 +1,4 @@
-package com.ttp.validator.userNameValidator;
+package com.ttp.domain.model.validator;
 
 import com.ttp.domain.validator.userNameValidator.UserNameValidator;
 import org.junit.jupiter.api.Assertions;
