@@ -16,6 +16,11 @@ public class UserNameValidatorTest {
         Assertions.assertFalse(UserNameValidator.validateUserName("Ab a"));
         Assertions.assertFalse(UserNameValidator.validateUserName("Abc a"));
         Assertions.assertFalse(UserNameValidator.validateUserName("Abc ab"));
+        Assertions.assertFalse(UserNameValidator.validateUserName("Abc abc  "));
+        Assertions.assertFalse(UserNameValidator.validateUserName("Abc  ab"));
+        Assertions.assertFalse(UserNameValidator.validateUserName("Abc @ab"));
+        Assertions.assertFalse(UserNameValidator.validateUserName("Abcab"));
+        Assertions.assertFalse(UserNameValidator.validateUserName("Abca@b"));
         Assertions.assertTrue(UserNameValidator.validateUserName("Abc abc"));
 
     }

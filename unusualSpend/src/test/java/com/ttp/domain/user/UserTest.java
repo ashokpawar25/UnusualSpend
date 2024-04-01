@@ -7,24 +7,31 @@ import com.ttp.domain.exceptions.user.InvalideUserIdException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 public class UserTest {
 
     @Test
-    void shouldThrowExceptionWhenUserIdIsInvalid() throws InvalideUserIdException {
-        Assertions.assertThrows(Exception.class, () -> User.create(-1, "Ashok", "ashokpawar8020@gmail.com"));
-        Assertions.assertThrows(Exception.class, () -> User.create(0, "Ashok", "ashokpawar8020@gmail.com"));
+    void shouldBeAbleToCreateInstanceOfUser() throws InvalideEmailException, InvalideUserNameException, InvalideUserIdException {
+        User user = User.create(1,"Ashok Pawar","ashokpawar8020@gmail.com");
+        assertNotNull(user);
     }
 
     @Test
-    void shouldthrowExeceptionWhenUserEmailIsInvalid() throws InvalideUserIdException {
-        Assertions.assertThrows(InvalideEmailException.class, () -> User.create(3, "Ashok Pawar", null));
-        Assertions.assertThrows(InvalideEmailException.class, () -> User.create(4, "Ashok Pawar", ""));
-        Assertions.assertDoesNotThrow(() -> User.create(2, "Ashok Pawar", "ashokpawar8020@gmail.com"));
+    void shouldBeAbleToThrowExceptionWhenUserIdIsInvalid(){
+        assertThrows(InvalideUserIdException.class, () -> User.create(-1, "Ashok Pawar", "ashokpawar8020@gmail.com"));
+        assertThrows(InvalideUserIdException.class, () -> User.create(0, "Ashok Pawar", "ashokpawar8020@gmail.com"));
     }
 
     @Test
-    void shouldThrowExceptioinWhenUserNameIsInvalid() throws InvalideEmailException, InvalideUserNameException, InvalideUserIdException {
-        Assertions.assertThrows(InvalideUserNameException.class, () -> User.create(4, "av al", "sample@gmail.com"));
-        Assertions.assertDoesNotThrow(() -> User.create(3, "sample Name", "sample@gmail.com"));
+    void shouldBeAbleToThrowExceptionWhenEmailIdIsInvalid(){
+        assertThrows(InvalideEmailException.class, () -> User.create(1, "Ashok Pawar", null));
+        assertThrows(InvalideEmailException.class, () -> User.create(2, "Ashok Pawar", ""));
+        assertThrows(InvalideEmailException.class, () -> User.create(2, "Ashok Pawar", "ashokpawar8020@gmailcom"));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenUserNameIsInvalid(){
+        assertThrows(InvalideUserNameException.class, () -> User.create(4, "av al", "sample@gmail.com"));
     }
 }

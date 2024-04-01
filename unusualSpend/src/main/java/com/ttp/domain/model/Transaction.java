@@ -10,14 +10,14 @@ import java.util.Objects;
 
 public class Transaction {
 
-    private int transactionID;
-    private Category category;
-    private int amount;
-    private LocalDate transactionDate;
-    private int creditCardId;
+    private final int transactionId;
+    private final Category category;
+    private final int amount;
+    private final LocalDate transactionDate;
+    private final int creditCardId;
     
-    public Transaction(int transactionID, Category category, int amount, LocalDate transactionDate, int creditCardId) {
-        this.transactionID = transactionID;
+    public Transaction(int transactionId, Category category, int amount, LocalDate transactionDate, int creditCardId) {
+        this.transactionId = transactionId;
         this.category = category;
         this.amount = amount;
         this.transactionDate = transactionDate;
@@ -52,11 +52,11 @@ public class Transaction {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transaction that = (Transaction) o;
-        return transactionID == that.transactionID && amount == that.amount && creditCardId == that.creditCardId && category == that.category && Objects.equals(transactionDate, that.transactionDate);
+        return transactionId == that.transactionId && amount == that.amount && creditCardId == that.creditCardId && category == that.category && Objects.equals(transactionDate, that.transactionDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(transactionID, category, amount, transactionDate, creditCardId);
+        return Objects.hash(transactionId, category, amount, transactionDate, creditCardId);
     }
 }
