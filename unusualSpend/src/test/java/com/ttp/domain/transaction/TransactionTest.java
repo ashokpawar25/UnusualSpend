@@ -1,7 +1,7 @@
 package com.ttp.domain.transaction;
 
-import com.ttp.domain.Category;
-import com.ttp.domain.Transaction;
+import com.ttp.domain.model.Category;
+import com.ttp.domain.model.Transaction;
 import com.ttp.domain.exceptions.transaction.InvalidAmountException;
 import com.ttp.domain.exceptions.transaction.InvalideCategoryException;
 import com.ttp.domain.exceptions.transaction.InvalideTransactionIdException;

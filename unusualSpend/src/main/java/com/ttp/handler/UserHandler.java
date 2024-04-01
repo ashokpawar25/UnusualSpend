@@ -1,6 +1,6 @@
 package com.ttp.handler;
 
-import com.ttp.domain.User;
+import com.ttp.domain.model.User;
 
 import java.util.ArrayList;
 import java.util.List;

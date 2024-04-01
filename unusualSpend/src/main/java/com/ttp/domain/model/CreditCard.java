@@ -1,4 +1,4 @@
-package com.ttp.domain;
+package com.ttp.domain.model;
 
 import com.ttp.domain.exceptions.transaction.InvalidCardIdException;
 

@@ -1,9 +1,9 @@
 package com.ttp.creditCardManager;
 
-import com.ttp.domain.Category;
-import com.ttp.domain.CreditCard;
-import com.ttp.domain.Transaction;
-import com.ttp.domain.User;
+import com.ttp.domain.model.Category;
+import com.ttp.domain.model.CreditCard;
+import com.ttp.domain.model.Transaction;
+import com.ttp.domain.model.User;
 import com.ttp.dto.AmountAndCategory;
 import com.ttp.handler.EmailHandler;
 import com.ttp.dto.UserRecord;

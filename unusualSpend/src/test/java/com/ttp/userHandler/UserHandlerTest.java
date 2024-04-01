@@ -1,6 +1,6 @@
 package com.ttp.userHandler;
 
-import com.ttp.domain.User;
+import com.ttp.domain.model.User;
 import com.ttp.handler.UserHandler;
 import com.ttp.domain.exceptions.user.InvalideEmailException;
 import com.ttp.domain.exceptions.user.InvalideUserNameException;

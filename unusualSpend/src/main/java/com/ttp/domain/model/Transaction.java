@@ -1,4 +1,4 @@
-package com.ttp.domain;
+package com.ttp.domain.model;
 
 import com.ttp.domain.exceptions.transaction.InvalidAmountException;
 import com.ttp.domain.exceptions.transaction.InvalideCategoryException;
@@ -10,17 +10,12 @@ import java.util.Objects;
 
 public class Transaction {
 
-    int transactionID;
-    Category category;
-    int amount;
-    LocalDate transactionDate;
-    int creditCardId;
-
-    public Transaction()
-    {
-
-    }
-
+    private int transactionID;
+    private Category category;
+    private int amount;
+    private LocalDate transactionDate;
+    private int creditCardId;
+    
     public Transaction(int transactionID, Category category, int amount, LocalDate transactionDate, int creditCardId) {
         this.transactionID = transactionID;
         this.category = category;

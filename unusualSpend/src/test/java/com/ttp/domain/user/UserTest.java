@@ -1,14 +1,13 @@
 package com.ttp.domain.user;
 
 import com.ttp.domain.exceptions.user.InvalideEmailException;
-import com.ttp.domain.User;
+import com.ttp.domain.model.User;
 import com.ttp.domain.exceptions.user.InvalideUserNameException;
 import com.ttp.domain.exceptions.user.InvalideUserIdException;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class UserTest {
-    User user = new User();
 
     @Test
     void shouldThrowExceptionWhenUserIdIsInvalid() throws InvalideUserIdException {
